@@ -49,7 +49,7 @@ Item.init (
             sequelize,
             freezeTableName: true,
             underscored: true,
-            modelName: 'items',
+            modelName: 'Items',
 
 
     }
