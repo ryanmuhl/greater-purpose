@@ -1,6 +1,7 @@
 const sequelize = require('../config/connection');
 const seedCategories = require('./categoriesData');
 const seedItems = require('./itemsData');
+const seedUser = require('./userData');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -8,6 +9,8 @@ const seedAll = async () => {
   await seedCategories();
 
   await seedItems();
+
+  await seedUser();
 
   process.exit(0);
 };

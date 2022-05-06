@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Category extends Model {}
 
-Items.init (
+Category.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -15,10 +15,10 @@ Items.init (
             type: DataTypes.STRING,
             allowNull: false,
         },
-        filename: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
+        // filename: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        // }
         },
         {
             sequelize,

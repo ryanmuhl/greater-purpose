@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Item extends Model {}
 
-Items.init (
+Item.init (
     {
         id: {
             type: DataTypes.INTEGER,
@@ -49,7 +49,7 @@ Items.init (
             sequelize,
             freezeTableName: true,
             underscored: true,
-            modelName: 'item',
+            modelName: 'items',
 
 
     }

@@ -1,6 +1,6 @@
 const { Item } = require('../models');
 
-const itemsData = [
+const itemsdata = [
   {
     item_name: 'Hat',
     item_description: 'Blue Ball Cap',
@@ -39,6 +39,6 @@ const itemsData = [
   
 ];
 
-const seedItems = () => Item.bulkCreate(itemsData);
+const seedItems = () => Item.bulkCreate(itemsdata);
 
 module.exports = seedItems;
