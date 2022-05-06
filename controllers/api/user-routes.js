@@ -1,6 +1,41 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+//GET /api/user
+router.get('/', (req, res) => {
+  User.findAll()
+  .then(dbUserData => res.json(dbUserData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+//GET /api/user/1
+router.get('/:id', (req, res) => {
+  User.findOne({
+    attributes: { exclude: [password] },
+    where: {
+      id: req.params.id
+    },
+    include: {
+      model: this.post,
+      attributes: ['id', 'title', 'post_url', 'created_at']
+    },
+  })
+    .then(dbUserData => {
+      if(!dbUserData) {
+        res.status(404).json({ message: 'No donation found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 //POST /api/user/
 router.post('/', (req, res) => {
   User.create({
