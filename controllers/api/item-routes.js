@@ -16,18 +16,19 @@ router.post('/', async (req, res) => {
 }
 });
 
-//Get new items by ID
-router.get('/:id', async (req, res) => {
-    const itemData = await Item.findOne({where:{id:req.params.id}} )
-        // include: [
-        //     {
-        //         model: Item,
-        //         attributes: ['username']
-        //     }
-        // ]
-    .then(() => console.log(itemData));
-
-});
+// GET one item
+router.get('/item', async (req, res) => {
+    try {
+      const dbItemData = await Item.findByPk(req.params.id);
+  
+      const item = dbItemData.get({ plain: true });
+      // Send over the 'loggedIn' session variable to the 'homepage' template
+      res.render('item', { item, loggedIn: req.session.loggedIn });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 module.exports = router
 
