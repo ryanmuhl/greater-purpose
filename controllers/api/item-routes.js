@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const res = require('express/lib/response');
-const { Item, Category, User } = require('../../models');
+const { Item, Category } = require('../../models');
 
-//Create new Item
+//Create New Item
 router.post('/', async (req, res) => {
     try {
         const newItem = await Item.create({
@@ -16,22 +16,7 @@ router.post('/', async (req, res) => {
 }
 });
 
-// GET one item
-// router.get('/item', async (req, res) => {
-//     try {
-//       const dbItemData = await Item.findByPk(req.params.id);
-  
-//       const item = dbItemData.get({ plain: true });
-//       // Send over the 'loggedIn' session variable to the 'homepage' template
-//       res.render('item', { item, loggedIn: req.session.loggedIn });
-//     } catch (err) {
-//       console.log(err);
-//       res.status(500).json(err);
-//     }
-//   });
-
-
-// / get all users
+// / Get All Items
 router.get('/', (req, res) => {
     Item.findAll({
     })
@@ -41,6 +26,27 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
       });
   });
+
+  //Get Item By Id
+router.get('/:id', (req, res) => {
+    Item.findOne({
+      where: {
+        id: req.params.id
+      },
+    })
+      .then(dbUserData => {
+        if (!dbUserData) {
+          res.status(404).json({ message: 'No item found with this id' });
+          return;
+        }
+        res.json(dbUserData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+  
   
 
 module.exports = router
