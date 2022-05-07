@@ -18,14 +18,14 @@ router.post('/', async (req, res) => {
 
 //Get new items by ID
 router.get('/:id', async (req, res) => {
-    const itemData = await Item.findByPk(req.params.id, {
-        include: [
-            {
-                model: User,
-                attributes: ['username']
-            }
-        ]
-    })
+    const itemData = await Item.findOne({where:{id:req.params.id}} )
+        // include: [
+        //     {
+        //         model: Item,
+        //         attributes: ['username']
+        //     }
+        // ]
+    .then(() => console.log(itemData));
 
 });
 
