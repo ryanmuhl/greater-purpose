@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/config');
 
 class Category extends Model {}
 
-Items.init (
+Category.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -15,18 +15,17 @@ Items.init (
             type: DataTypes.STRING,
             allowNull: false,
         },
-        filename: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
-        },
-        {
-            sequelize,
-            freezeTableName: true,
-            underscored: true,
-            modelName: 'category',
-
-
+        // filename: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        // }
+    },
+  
+    {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'category',
     }
 );
 
