@@ -3,27 +3,27 @@ const { Category } = require('../models');
 
 const categoriesdata = [
   {
-    item_type: 'Book',
+    item_type: 'Book'
     // filename: 'lalala.jpg',
 
   },
   {
-    item_type: 'Jacket',
+    item_type: 'Jacket'
     // filename: 'lalala.jpg',
 
   },
   {
-    item_type: 'Shirt',
+    item_type: 'Shirt'
     // filename: 'lalala.jpg',
 
   },
   {
-    item_type: 'Pants',
+    item_type: 'Pants'
     // filename: 'lalala.jpg',
 
   },
   {
-    item_type: 'Hat',
+    item_type: 'Hat'
     // filename: 'lalala.jpg',
 
   },
