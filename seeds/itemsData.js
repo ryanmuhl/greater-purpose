@@ -6,7 +6,8 @@ const itemsdata = [
     item_description: 'Blue Ball Cap',
     pickup_date: '2022-08-17',
     pickup_contact: 'ObiWan Kenobi',
-    pickup_address: '112 Death Star Ct, Raleigh, NC 27703'
+    pickup_address: '112 Death Star Ct, Raleigh, NC 27703',
+    user_id: '1'
   },
   {
     item_name: 'Jacket',

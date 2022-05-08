@@ -34,18 +34,18 @@ Item.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'User',
                 key: 'id',
             },
          
-        },
-        category_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'category',
-                key: 'id',
-            },
-        },
+        }
+        // category_id: {
+        //     type: DataTypes.STRING,
+        //     references: {
+        //         model: 'Category',
+        //         key: 'id',
+        //     },
+        // },
         
 
     },
