@@ -1,22 +1,25 @@
 const router = require('express').Router();
 const res = require('express/lib/response');
-const { Item, Category } = require('../../models');
+const { Item, User, Category } = require('../../models');
 
-//Create New Item
-router.post('/', async (req, res) => {
-    try {
-        const newItem = await Item.create({
-            ...req.body,
-            user_id: req.session.user_id,
-        });
-    
-    res.status(200).json(newItem);
-} catch (err) {
-    res.status(400).json(err.message);
-}
+
+router.post('/', (req, res) => {
+  Item.create({
+    item_name: req.body.item_name,
+    item_description: req.body.item_description,
+    pickup_date: req.body.pickup_date,
+    pickup_contact: req.body.pickup_contact,
+    pickup_address: req.body.pickup_address,
+    user_id: req.session.user_id,
+  })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-// / Get All Items
+// / Get All Items /api/item
 router.get('/', (req, res) => {
     Item.findAll({
     })
@@ -27,25 +30,33 @@ router.get('/', (req, res) => {
       });
   });
 
-  //Get Item By Id
+//Get item by id /api/item/id
 router.get('/:id', (req, res) => {
-    Item.findOne({
-      where: {
-        id: req.params.id
-      },
+  Item.findOne({
+
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 'item_name', 'item_description', 'pickup_date', 'pickup_contact', 'pickup_address'],
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbPostData => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      res.json(dbPostData);
     })
-      .then(dbUserData => {
-        if (!dbUserData) {
-          res.status(404).json({ message: 'No item found with this id' });
-          return;
-        }
-        res.json(dbUserData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
   
   
 

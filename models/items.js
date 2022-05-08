@@ -34,7 +34,7 @@ Item.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'User',
+                model: 'user',
                 key: 'id',
             },
          
@@ -53,7 +53,7 @@ Item.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Items',
+        modelName: 'Item',
     }
     
 );
