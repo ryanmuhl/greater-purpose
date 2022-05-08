@@ -3,22 +3,6 @@ const res = require('express/lib/response');
 const { Item, User, Category } = require('../../models');
 
 
-router.post('/', (req, res) => {
-  Item.create({
-    item_name: req.body.item_name,
-    item_description: req.body.item_description,
-    pickup_date: req.body.pickup_date,
-    pickup_contact: req.body.pickup_contact,
-    pickup_address: req.body.pickup_address,
-    user_id: req.session.user_id,
-  })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
-
 // / Get All Items /api/item
 router.get('/', (req, res) => {
     Item.findAll({
@@ -42,6 +26,10 @@ router.get('/:id', (req, res) => {
       {
         model: User,
         attributes: ['username']
+      },
+      {
+        model: Category,
+        attributes: ['item_type']
       }
     ]
   })
@@ -57,8 +45,22 @@ router.get('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-  
-  
 
+router.post('/', (req, res) => {
+  Item.create({
+    item_name: req.body.item_name,
+    item_description: req.body.item_description,
+    pickup_date: req.body.pickup_date,
+    pickup_contact: req.body.pickup_contact,
+    pickup_address: req.body.pickup_address,
+    
+  })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+  
 module.exports = router
 

@@ -10,13 +10,13 @@ Item.belongsTo(User, {
   foreignKey: 'user_id',
 })
 
-// Item.belongsTo(Category, {
-//   foreignKey: 'category_id',
-// })
+Item.belongsTo(Category, {
+  foreignKey: 'category_id',
+})
 
-// Category.hasMany(Item, {
-//   foreignKey: 'category_id'
-// })
+Category.hasMany(Item, {
+  foreignKey: 'category_id'
+})
 
 
 
