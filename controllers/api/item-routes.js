@@ -47,14 +47,8 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  Item.create({
-    item_name: req.body.item_name,
-    item_description: req.body.item_description,
-    pickup_date: req.body.pickup_date,
-    pickup_contact: req.body.pickup_contact,
-    pickup_address: req.body.pickup_address,
-    
-  })
+  
+  Item.create(req.body)
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
       console.log(err);
