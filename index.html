@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Donate For A life</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>All About Cats</title>
 </head>
 
 <body>
@@ -47,20 +47,41 @@
     
         
 
-            
+            <div class="contant">
+                <label for="breed">Category:</label>
+            </div>
+            <!-- // drop menu -->
+            <div class="drop">
+                <select name="breed" id="breed">
+                    <option value="Clothing">Clothing</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Tools">Tools</option>
+                    
+                </select>
+            </div>
+
+            <div class="submit2">
+                <button class="submitbtn" type="submit">Submit</button>
+            </div>
+        </div>
         
     <!-- //create the page footer -->
     <footer class="end">
 
         
         
-        
+        <div class="endI">
+            <img src="./micheal.JPG" width="155px" , height="105px">
+        </div>
+
+
+
     </footer>
     <!-- include smtpjs to send emails to the user -->
     <script scr="https://smtpjs.com/v3/smtp.js"></script>
-    {{!-- <script src="./script.js"></script> --}}
+    <script src="./script.js"></script>
 
-    <script src="/js/login.js"></script>
+    <script src="./public/js/login.js"></script>
 
 </body>
 

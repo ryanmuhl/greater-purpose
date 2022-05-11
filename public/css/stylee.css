@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    
+    padding: 20px 35px;
+    background-color: gray;
+}
+
+header h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    color: red;
+    margin: 0; 
+} 
+
+.hero {
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /*background-position: 80%;*/
+}
+
+.hero-form {
+    border: 3px solid gray;
+    background-color: antiquewhite;
+    padding: 20px;
+    color:blueviolet;
+    width: 40%;
+    margin: 3.5%;
+    border-radius: 15px;
+}
+
+.hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+    color: black;
+}
+
+.hero-form p {
+    margin: 5px 0 15px 0;
+}
+
+.hero-cont {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: blueviolet;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.hero-cont h2 {
+    font-size: 55px;
+    color:black;
+}
+
+.form-input {
+    border: 1px solid gray;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: black;
+    width: 90%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.title{
+    text-align: center;
+}
+
+.contant{
+ margin-left: 10px;
+ padding: 5px;
+ font-size: larger;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.drop{
+    width: 25px;
+    padding: 1rem;
+}
+.submit2 {
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+ 
