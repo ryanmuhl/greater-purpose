@@ -2,8 +2,11 @@ const router = require("express").Router();
 const { User, Item, Category } = require("../models/");
 
 // homepage
-router.get("/", (req, res) => {
-  res.render("home");
+router.get("/", async (req, res) => {
+  res.render("home", {
+    loggedIn: req.session.loggedIn,
+  });
+  
 });
 
 // Login route

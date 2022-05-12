@@ -1,11 +1,11 @@
 //(PLACEHOLDER) function to gather form data and call our "POST /api/user/login" express route
 const loginFormHandler = async function (event) {
   event.preventDefault();
-  const user = document.querySelector('#user-login').value.trim();
+  const username = document.querySelector('#user-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
-  if (user && password) {
-    const response = await fetch('/api/users/login', {
+  if (username && password) {
+    const response = await fetch('/api/user/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
