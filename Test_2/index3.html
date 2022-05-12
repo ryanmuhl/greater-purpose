@@ -24,7 +24,7 @@
             <ul>
                 <!--header container left item -->
                 <li>
-                    <a href="Home">Home</a>
+                    <a href="index2.html">Home</a>
                 </li>
 
 
@@ -34,98 +34,82 @@
 
     </div>
 
-    <div class="contant">
-        <label for="breed">Category:</label>
-    </div>
+
     <!-- // drop menu -->
+
+
+
+
+    <div class="headerbox">
+    </div>
+
+    <div class="contant">
+        <label for="Category">Category:</label>
+    </div>
     <div class="drop">
-        <select name="breed" id="breed">
+        <select name="Category" id="Category">
             <option value="Clothing">Clothing</option>
             <option value="Furniture">Furniture</option>
             <option value="Tools">Tools</option>
-            
+
         </select>
     </div>
 
-    
-</div>
-
-    <div class="headerbox"></div>
-
     <div class="action">
-        <div class="actioin">
+        <form action="">
 
-            <div label for="first name">First Name:</label>
-                <input type="text" placeholder="First Name" name="name" id="first name" class="form-input">
-            </div>
+            <label for="first name">First Name:</label>
+            <input type="text" placeholder="First Name" name="name" id="first name" class="form-input">
 
+            <label for="last name">Last Name:</label>
+            <input type="text" placeholder="Last Name" name="last name" id="last name" class="form-input">
 
-            <div label for="last name">Last Name:</label>
-                <input type="text" placeholder="Last Name" name="last name" id="last name" class="form-input">
-            </div>
+            <br>
 
-
-
-            <div label for="Adress">Address: &nbsp&nbsp&nbsp </label>
-                <input type="text" placeholder="Adress" name="Adress" id="adress" class="form-input">
-            </div>
-
-            <div label for="phone number">Phone Number: &nbsp&nbsp&nbsp </label>
-                <input type="text" placeholder="Phone Number" name="phonenumber" id="phonenumber" class="form-input">
-            </div>
+            <label for="Address">Address: &nbsp&nbsp&nbsp </label>
+            <input type="text" placeholder="Address" name="Address" id="address" class="form-input">
 
 
+            <label for="phone number">Phone Number: &nbsp&nbsp&nbsp </label>
+            <input type="text" placeholder="Phone Number" name="phonenumber" id="phonenumber" class="form-input">
+            <br>
+            <label for="time">Pick Time:&nbsp</label>
+            <input type="text" placeholder="time" name="time" id="time" class="form-input">
 
-            <div label for="time">Pick Time:&nbsp</label>
-                <input type="text" placeholder="time" name="time" id="time" class="form-input">
-            </div>
 
-            <div label for="item">Item Name:&nbsp</label>
-                <input type="text" placeholder="Item Name" name="item" id="item" class="form-input">
-            </div>
+            <label for="item">Item Name:&nbsp</label>
+            <input type="text" placeholder="Item Name" name="item" id="item" class="form-input">
+            <br>
 
-            <div label for="item description">Item Description:&nbsp</label>
-                <input type="text" placeholder="Item Description" name="itemdiscription" id="itemdiscription"
-                    class="form-input">
-            </div>
+            <label for="item description">Item Description:&nbsp</label>
+            <input type="text" placeholder="Item Description" name="itemdiscription" id="itemdiscription"
+                class="form-input">
 
-            <div label for="date">Date:</label>
-                <div class="col-sm-6" style="height:130px;">
-                   <div class="form-group">
-                      <div class='input-group date' id='datetimepicker8'>
-                         <input type='text' class="form-control" />
-                         <span class="input-group-addon">
-                         <span class="fa fa-calendar">
-                         </span>
-                         </span>
-                      </div>
-                   </div>
-                </div>
-                <script type="text/javascript">
-                   $(function () {
-                       $('#datetimepicker8').datetimepicker({
-                           icons: {
-                               time: "fa fa-clock-o",
-                               date: "fa fa-calendar",
-                               up: "fa fa-arrow-up",
-                               down: "fa fa-arrow-down"
-                           }
-                       });
-                   });
-                </script>
-             </div>
-            
 
-            
+            <br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+
+
+
+
+
             <button type="submit" id="formsubmit">Submit</button>
-        </div>
+        </form>
+    </div>
 
     </div>
 
 
+    <script>
+        $(function () {
+            $('#datepicker').datepicker();
+        })
+    </script>
 
 
-    
 
 </body>
 

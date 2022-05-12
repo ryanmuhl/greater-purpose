@@ -106,15 +106,56 @@
   .actionin {
     justify-content:center ;
     display: flex;
-    
-  
-    
-    
-  
       
   }
 
 
+
+  .hero {
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /*background-position: 80%;*/
+}
+
+.hero-form {
+    border: 3px solid purple;
+    background-color: antiquewhite;
+    padding: 20px;
+    color:purple;
+    width: 40%;
+    margin: 3.5%;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+    color: purple;
+}
+
+.hero-form p {
+    margin: 5px 0 15px 0;
+}
+
+.hero-cont {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: purple;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.hero-cont h2 {
+    font-size: 55px;
+    color:purple;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 
 
@@ -149,4 +190,13 @@
         display:flex;
         
         
+     }
+     .input-group-append{cursor: pointer;}
+     
+     form input{
+       margin: 1%
+       
+     }
+     ul{
+       list-style: none;
      }
