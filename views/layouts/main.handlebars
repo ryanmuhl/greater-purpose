@@ -4,13 +4,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <link rel="stylesheet" href="/public/css/style.css">
+  <title>Donate For A Life</title>
 </head>
 
 <body>
+  <header class="header"> <!--header container -->
+
+        <h1>A Greater Purpose!!!</h1> <!--header container left item -->
+
+
+
+        <nav class="header"> 
+
+  
+          
+                    <a href="/">Home</a>
+              
+                {{#if loggedIn}} 
+              
+                  <a href="/" id="logout">logout</a>
+              
+                {{else}}
+            
+                   
+                    <a href="/login">login</a>
+            
+                {{/if}}
+
+              
+                    {{!-- <a href="profile">Profile</a> --}}
+
+    
+                
+        
+
+        </nav>
+
+    </header>
+
   <main>
     {{{body}}}
   </main>
+
+  {{#if loggedIn}}
+  <script src="/public/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

@@ -1,76 +1,57 @@
 const router = require('express').Router();
-const model = require('connect-session-sequelize/lib/model');
-const { Items, Category } = require('../../models');
-const { sequelize } = require('../../models/User');
+const res = require('express/lib/response');
+const { Items, User, Category } = require('../../models');
 
 // GET /api/items
 router.get('/', (req, res) => {
-    Items.findAll()
-    .then(dbItemsData => res.json(dbItemsData))
-    .catch(err => {
+    Item.findAll({
+    })
+      .then(dbUserData => res.json(dbUserData))
+      .catch(err => {
         console.log(err);
         res.status(500).json(err);
-    });
-});
+      });
+  });
 
+//Get item by id /api/item/id
 router.get('/:id', (req, res) => {
-    Items.findOne({
-        where: {
-            id: req.params.id
-        },
-        attributes: [
-            'id',
-            'post_url',
-            'title',
-            'created_at',
-            [sequelize.literal('(SELECT COUNT(*) FROME category WHERE items.id = category.items_id)')]
-        ],
-        include: [
-            {
-                model: Items,
-                attributes: ['id', 'title', 'post_url', 'created_at'],
-                include: {
-                    model: Category, 
-                    attributes: ['id', 'category_text', 'items_id', 'user_id', 'created_at'],
-                }
-            },
-            {
-                model: Items,
-                attributes: ['title'],
-                through: Category,
-                as: 'category_posts'
-            }
-        ]
-    })
-    .then(dbItemsData => {
-        if(!dbItemsData) {
-            res.status(404).json({ message: 'No item found with this id' });
-            return;
-        }
-        res.json(dbItemsData);
+  Item.findOne({
+
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 'item_name', 'item_description', 'pickup_date', 'pickup_contact', 'pickup_address'],
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      },
+      {
+        model: Category,
+        attributes: ['item_type']
+      }
+    ]
+  })
+    .then(dbPostData => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      res.json(dbPostData);
     })
     .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 
-router.delete('/:id', (req, res) => {
-    Items.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-    .then(dbItemsData => {
-        if(!dbItemsData) {
-            res.status(404).json({ message: 'No item found with this id' });
-            return;
-        }
-        res.json(dbItemsData);
-    })
+router.post('/', (req, res) => {
+  
+  Item.create(req.body)
+    .then(dbPostData => res.json(dbPostData))
     .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 

@@ -12,14 +12,17 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Category.findOne({
-        attributes: {},
+
         where: {
             id: req.params.id
         },
-        include: {
-            model: Category,
-            attributes: ['id', 'title', 'post_url', 'created_at']
-        },
+        attributes: ['item_type'],
+    include: [
+      {
+        model: Item,
+        attributes: ['item_name']
+      }
+    ]
     })
     .then(dbCategoryData => {
         if(!dbCategoryData) {
@@ -33,5 +36,18 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+router.post('/', (req, res) => {
+    Category.create({
+      item_name: req.body.item_name,
+      item_type: req.body.item_type,  
+      
+    })
+      .then(dbPostData => res.json(dbPostData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
 module.exports = router;
