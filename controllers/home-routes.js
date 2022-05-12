@@ -20,4 +20,12 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+
+// User Input 
+router.get('/userinput', (req, res) => {
+ 
+  // Otherwise, render the 'login' template
+  res.render('user');
+});
+
 module.exports = router;
