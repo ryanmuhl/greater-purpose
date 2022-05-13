@@ -22,8 +22,8 @@ router.get('/login', (req, res) => {
 
 
 // User Input 
-router.get('/userinput', (req, res) => {
-  res.render("user", {
+router.get('/iteminput', (req, res) => {
+  res.render("additem", {
     loggedIn: req.session.loggedIn,
   });
  
