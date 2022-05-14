@@ -8,13 +8,17 @@ const inputItemHandler = async (event) => {
   const itemName = document.querySelector('#item').value.trim();
   const itemDescription = document.querySelector('#item-drscription').value.trim();
   const pickupDate = document.querySelector('#date');
+  
+  const categorytext =  document.querySelector('select[name="category"]').value;
+  const categoryid = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
 
-
-
-  if (firstName && lastName && pickupAddress && phoneNumber && itemName && itemDescription && pickupDate) {
+  if (firstName && lastName && pickupAddress && phoneNumber && itemName && itemDescription && pickupDate && categorytext) {
+    console.log(categoryid);
     const response = await fetch('/api/item', {
       method: 'POST',
-      body: JSON.stringify({ firstName, lastName, pickupAddress, phoneNumber, itemName, itemDescription, pickupDate}),
+      body: JSON.stringify({ firstName, lastName, pickupAddress, phoneNumber, itemName, itemDescription, pickupDate, categorytext}),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -24,7 +28,6 @@ const inputItemHandler = async (event) => {
       alert('Failed to add item');
     }
   }
-  console.log(event.target)
 };
 
 document
