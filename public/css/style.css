@@ -197,7 +197,15 @@ a:hover {
   height: 1000px;
 }
 
+.headerbox {
+  padding: 20px;
+  height: 125px;
+  background-image: url("/images/donate3.jpg");
+  background-position: center;
+  background-size: contain;
 
+  
+ }
   
 
      
