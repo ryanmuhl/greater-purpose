@@ -19,4 +19,24 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// User Input 
+router.get('/iteminput', (req, res) => {
+  res.render("additem", {
+    loggedIn: req.session.loggedIn,
+  });
+ 
+  // Otherwise, render the 'login' template
+  
+});
+
+// User Input 
+router.get('/useritems', (req, res) => {
+  res.render("donations", {
+    loggedIn: req.session.loggedIn,
+  });
+ 
+  // Otherwise, render the 'login' template
+  
+});
+
 module.exports = router;
