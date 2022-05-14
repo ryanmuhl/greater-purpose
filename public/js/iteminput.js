@@ -10,6 +10,7 @@ let item = {};
    item.pickup_date = document.querySelector('#date').value
    item.category_id =  document.querySelector('#category').value;
   
+   
  if (item.first_name && 
     item.last_name && 
     item.pickup_address && 
