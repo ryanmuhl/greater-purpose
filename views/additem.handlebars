@@ -1,8 +1,8 @@
- <div class="header3">
-        <!--header container -->
+<div class="header3">
+    <!--header container -->
 
-        <h1 style="color:blue;">Greater Purpose!</h1>
-        <!--header container left item -->
+    <h1 style="color:blue;">Greater Purpose!</h1>
+    <!--header container left item -->
 
 
     <!-- // drop menu -->
@@ -16,26 +16,26 @@
     <div class="contant">
         <label for="Category">Category:</label>
     </div>
-    <div class="drop">
-        <select name="Category" id="Category">
-            <option value="Book">Book</option>
-            <option value="Jacket">Jacket</option>
-            <option value="Shirt">Shirt</option>
-            <option value="Pants">Pants</option>
-            <option value="Hat">Hat</option>
-
-        </select>
-    </div>
 
     <div class="action">
-        <form action="">
+        <form class="item-form" action="">
+
+            <div class="drop">
+                <select name="Category" id="category">
+                    <option value="Book">Book</option>
+                    <option value="Jacket">Jacket</option>
+                    <option value="Shirt">Shirt</option>
+                    <option value="Pants">Pants</option>
+                    <option value="Hat">Hat</option>
+
+                </select>
+            </div>
 
             <label for="first name">First Name:</label>
-            <input type="text" placeholder="First Name" name="name" id="first name" class="form-input">
+            <input type="text" placeholder="First Name" name="name" id="first-name" class="form-input">
 
             <label for="last name">Last Name:</label>
-            <input type="text" placeholder="Last Name" name="last name" id="last name" class="form-input">
-
+            <input type="text" placeholder="Last Name" name="name" id="last-name" class="form-input">
             <br>
 
             <label for="Address">Address: &nbsp&nbsp&nbsp </label>
@@ -43,10 +43,8 @@
 
 
             <label for="phone number">Phone Number: &nbsp&nbsp&nbsp </label>
-            <input type="text" placeholder="Phone Number" name="phonenumber" id="phonenumber" class="form-input">
+            <input type="text" placeholder="Phone Number" name="phonenumber" id="phone-number" class="form-input">
             <br>
-            <label for="time">Pick Time:&nbsp</label>
-            <input type="text" placeholder="time" name="time" id="time" class="form-input">
 
 
             <label for="item">Item Name:&nbsp</label>
@@ -54,7 +52,7 @@
             <br>
 
             <label for="item description">Item Description:&nbsp</label>
-            <input type="text" placeholder="Item Description" name="itemdiscription" id="itemdiscription"
+            <input type="text" placeholder="Item Description" name="itemdiscription" id="item-drscription"
                 class="form-input">
 
 
@@ -68,9 +66,10 @@
 
 
 
-            <button type="submit" id="formsubmit">Submit</button>
+            <button type="create" id="item-form">Submit</button>
         </form>
     </div>
 
-    </div>
+</div>
 
+<script src="/js/iteminput.js"></script>

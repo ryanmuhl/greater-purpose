@@ -11,6 +11,22 @@ Item.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        first_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        last_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        pickup_address: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        pickup_address: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         item_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -21,14 +37,6 @@ Item.init(
         },
         pickup_date: {
             type: DataTypes.DATE,
-            allowNull: false,
-        },
-        pickup_contact: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        pickup_address: {
-            type: DataTypes.STRING,
             allowNull: false,
         },
         user_id: {
