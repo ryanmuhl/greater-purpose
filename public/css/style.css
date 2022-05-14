@@ -3,38 +3,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-  
-  padding: 20px 35px;
-  background-color: gray;
-}
-
-/* header h1 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 36px;
-  color: red;
-  margin: 0; 
-}  */
 
 .hero {
-  /*background-size: cover;*/
-  /*background-position: center;*/
+  
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  /*background-position: 80%;*/
+  background-color: rgb(167, 118, 26);
+  height: 1000px;
+ 
 }
 
 .hero-form {
   border: 3px solid gray;
-  background-color: antiquewhite;
+  background-color: orange;
   padding: 20px;
-  color:blueviolet;
+  color:black;
   width: 40%;
+  height: 40%;
   margin: 3.5%;
   border-radius: 15px;
+  box-shadow: 10px 10px 10px rgb(163, 12, 12);
 }
 
 .hero-form h3 {
@@ -51,21 +40,20 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 3.5%;
+  background-color: rgb(167, 118, 26);;
+  
 }
 
 
 .hero-cont h2 {
   font-size: 55px;
-  color: blueviolet;
+  color: black;
 }
 
 .form-input {
   border: 1px solid gray;
-  display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: black;
   width: 90%;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -93,114 +81,67 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
  
 }
-/* .header { 
-    padding: 20px;
-    background-color: greenyellow;
-    color: black;
-  
-    background-size: 100px 75px;
-   } */
 
+.navigation {
+display: flex;
+flex-wrap: wrap;
+margin: 10px;
+}
 
-   .header3 { 
-    padding: 20px;
-    background-color:goldenrod;
-    text-align: center;
-    
-    }
+.navigation a {
+  padding: 10px;
+}
 
-   .headerbox {
-    padding: 20px;
-    height: 130px;
-    margin-top: 10px;
-    /* background-image: url("./donate.jpg"); */
-    
-   }
+a:hover {
+  transition: all .4s ease-in-out;
+  background-color: yellow;
+}
+   
   
-  
-   /* <!--style left item--> */
-  /* .header h1 {
-    display: inline-block;
-    font-size: 48px;
-  } */
-  
-  /* <!--style right item--> */
-  /* .header div {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 25px;
-    font-weight: 100px;
-  } */
-  
-  /* <!--style right item--> */
-  /* .header div ul {
-    list-style-type: none;
-  } */
-  
-  /* <!--style right item--> */
-  /* .header div ul li {
-    display: inline-block;
-    font-weight: bold;
-    padding: 10px 15px;
-    
-  } */
+
   .header { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 20px;
-    background-color: greenyellow;
+    background-color: orange;
     color: black;
     background-size: 100px 75px;
    }
-  
-   /* <!--style left item--> */
-  .header h1 {
-    display: inline-block;
-    font-size: 48px;
-  }
-  
-  /* <!--style right item--> */
-  .header div {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 25px;
-    font-weight: 100px;
-  }
   
 
   .box {
     display: flex;
-    background-color: DodgerBlue;
-    margin-top: 50px;
+    background-color: rgb(167, 118, 26);
+    
+  }
+
+  .box div p {
+  align-items: center;
   }
   
   .action {
     display: flex;
     flex-direction:column;
-    justify-content: space-between;
+   
     background-color: goldenrod;
     margin-top: 25px;
     padding: 30px;
+    border-radius: 10px;
+    border: 3px solid gray;
+    box-shadow: 10px 10px 10px rgb(163, 12, 12);
+    width: 40%;
+  height: 75%;
   }
 
   .actionin {
     justify-content:center ;
     display: flex;
     
-  
     
-    
-  
-      
   }
-
-
-
-
-
-  .box > div {
+  
+  .box  div {
     
     margin: 25px;
     padding: 20px;
@@ -209,28 +150,51 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
   .middle{
       display: flex;
-      flex-direction:row;
-      align-content: space-around;
-      width: 900px;
-      height: 200px;
-      padding-left: 75px;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      background-color: rgb(167, 118, 26);
+      height: 1000px;
       
-      margin-top: 25px;
       
   }
+
+  .middle2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(167, 118, 26);
+    height: 1000px;
+    
+    
+}
+
+ .middle p {
+   display: flex;
+   width: 600px;
+   align-items: top;
+   padding-top: 30px;
+ }  
+ 
+ .girl-image img {
+   width: auto;
+   height: auto;
+ }
+
+ .create-button {
+   padding-left: 250px;
+   border-radius: 10px;
+ }
+
+ .create-button button {
+  border-radius: 10px;
+  opacity: .6;
+  transition: all .3s ease-in-out;
+  
+}
+
+
+  
+
      
-  .left > div {
-      display: flex;
-      font-weight: 25px;
-      background-color: brown;
-
-     }
-
-     .right > div {
-        
-        display:flex;
-        
-        
-     }
 
      
