@@ -19,7 +19,7 @@ Item.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        pickup_address: {
+        phone_number: {
             type: DataTypes.STRING,
             allowNull: false,
         },
