@@ -5,65 +5,50 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
-  {{!-- <link rel="stylesheet" href="/path/to/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" /> --}}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  {{!--
+  <link rel="stylesheet" href="/path/to/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" /> --}}
   <title>Donate For A Life</title>
 </head>
 
 <body>
 
 
-   <header class="header"> <!--header container -->
+  <header class="header">
+    <!--header container -->
 
-        <h1>A Greater Purpose!!!</h1> <!--header container left item -->
-
-
-
-        <nav class="header"> 
-
-  
-          
-                    <a href="/">Home</a>
-                    
-              
-                {{#if loggedIn}} 
-              
-                  <a href="/" id="logout">logout</a>
-                  <a href="/iteminput" id="iteminput">Donate Item</a>
-                  <a href="/useritems" id="useritems">User Donated Items</a>
-              
-                {{else}}
-            
-                   
-                    <a href="/login">login</a>
-            
-                {{/if}}
-
-              
-                    {{!-- <a href="profile">Profile</a> --}}
-
-        </nav>
-
-    </header>
-    
-                
-        
+    <h1>A Greater Purpose!!!</h1>
+    <!--header container left item -->
 
 
+
+    <nav class="header">
+      <a href="/">Home</a>
+      {{#if loggedIn}}
+      <a href="/" id="logout">logout</a>
+      <a href="/iteminput" id="iteminput">Donate Item</a>
+      <a href="/useritems" id="useritems">User Donated Items</a>
+      {{else}}
+      <a href="/login">login</a>
+      {{/if}}
+
+    </nav>
+
+  </header>
   <main>
     {{{body}}}
   </main>
 
- 
-
-  
-    
-
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 </body>
 
- {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{!-- <script>$(function () {$('#datepicker').datepicker();})</script> --}}
-  {{/if}}
+
+{{#if loggedIn}}
+<script src="/js/logout.js"></script>
+{{/if}}
 
 </html>
