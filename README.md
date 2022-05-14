@@ -79,7 +79,7 @@ Created/Designed by:
 
 
 ## Student: Angel Escobar
-* Email: 
+* Email: aescobar2045@gmail.com
 * Portfolio Repository: https://github.com/angelgiovanna/portfolio
 
 ## Student: Ahmad Faydi
