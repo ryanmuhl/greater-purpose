@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'item_name', 'item_description', 'pickup_date', 'pickup_contact', 'pickup_address'],
+   
     include: [
       {
         model: User,
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  
+  req.body.user_id=req.session.userId;
   Item.create(req.body)
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {

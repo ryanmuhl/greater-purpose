@@ -36,7 +36,7 @@ Item.init(
             allowNull: false,
         },
         pickup_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         user_id: {
