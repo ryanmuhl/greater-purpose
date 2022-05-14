@@ -183,13 +183,18 @@ a:hover {
  .create-button {
    padding-left: 250px;
    border-radius: 10px;
+  
+  transition: all .3s ease-in-out;
  }
 
  .create-button button {
   border-radius: 10px;
-  opacity: .6;
-  transition: all .3s ease-in-out;
   
+}
+
+.donations {
+  background-color: rgb(167, 118, 26);
+  height: 1000px;
 }
 
 
