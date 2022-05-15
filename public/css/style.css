@@ -163,11 +163,13 @@ a:hover {
   height: 1000px;
 }
 
-.middle p {
+.middle div p {
   display: flex;
   width: 600px;
   align-items: top;
   padding-top: 30px;
+  padding-left: 20px;
+  border-style: double;
 }
 
 .girl-image img {
