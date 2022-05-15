@@ -1,28 +1,28 @@
-
+//(PLACEHOLDER) function to gather form data and call our "POST /api/item/id" express route
 const deleteItemHandler = async function (event) {
-    event.preventDefault();
-  
-    if (event.target.hasAttribute('item-id')) {
-        const id = event.target.getAttribute('item-id');
+  event.preventDefault();
 
-       console.log(id)
+  //If delete button is selected with attribute of item-id,  then fetch api/item/id.  Allows for delete of item by id.
+  if (event.target.hasAttribute('item-id')) {
+    const id = event.target.getAttribute('item-id');
 
-      const response = await fetch(`/api/item/${id}`, {
-        method: 'DELETE',
+    console.log(id)
 
-        
-      });
-  
-      if (response.ok) {
-        document.location.reload();
-      } else {
-        alert('Failed To Delete Item');
-      }
+    const response = await fetch(`/api/item/${id}`, {
+      method: 'DELETE',
+
+
+    });
+
+    if (response.ok) {
+      document.location.reload();
+    } else {
+      alert('Failed To Delete Item');
     }
-  };
+  }
+};
 
 
-  document
+document
   .querySelector('#item-delete')
   .addEventListener('click', deleteItemHandler);
- 

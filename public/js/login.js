@@ -4,6 +4,7 @@ const loginFormHandler = async function (event) {
   const username = document.querySelector('#user-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
+  //If Username and Password are populated and exist in database,  log in.
   if (username && password) {
     const response = await fetch('/api/user/login', {
       method: 'POST',
@@ -20,6 +21,7 @@ const loginFormHandler = async function (event) {
   console.log(event.target)
 };
 
+//(PLACEHOLDER) function to gather form data and call our "POST /api/user/" express route
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -27,6 +29,7 @@ const signupFormHandler = async (event) => {
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
+  //If User Email and Password are populated,  Log in user.
   if (username && email && password) {
     const response = await fetch('/api/user', {
       method: 'POST',

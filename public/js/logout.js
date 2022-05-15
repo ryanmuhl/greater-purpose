@@ -1,3 +1,7 @@
+
+//Function to Fetch Logout Route.  If user is logged out
+//They will be re directed to the home page.
+
 const logout = async () => {
   const response = await fetch('/api/user/logout', {
     method: 'POST',
