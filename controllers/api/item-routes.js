@@ -46,8 +46,31 @@ router.get('/:id', async (req, res) => {
     });
 });
 
+//Delete item by id /api/item/id
+router.delete('/:id', async (req, res) => {
+  Item.destroy({
+
+    where: {
+      id: req.params.id
+    },
+
+  })
+    .then(dbDeleteData => {
+      if (!dbDeleteData) {
+        res.status(404).json({ message: 'Unble to Delete Due to Wrong ID' });
+        return;
+      }
+      res.json(dbDeleteData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.post('/', async(req, res) => {
   req.body.user_id=req.session.userId;
+  req.body.id=req.session.itemId
   Item.create(req.body)
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -55,6 +78,8 @@ router.post('/', async(req, res) => {
       res.status(500).json(err);
     });
 });
+
+
   
 module.exports = router
 

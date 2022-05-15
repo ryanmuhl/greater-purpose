@@ -9,7 +9,10 @@ let item = {};
    item.item_description = document.querySelector('#item-drscription').value.trim();
    item.pickup_date = document.querySelector('#date').value
    item.category_id =  document.querySelector('#category').value;
+   
   
+
+   
    
  if (item.first_name && 
     item.last_name && 

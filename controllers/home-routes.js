@@ -81,7 +81,6 @@ router.get('/useritems', withAuth, async (req, res) => {
 });
 
 
-
 // Login route /Login
 router.get('/login', async (req, res) => {
   // If the user is already logged in, redirect to the homepage
