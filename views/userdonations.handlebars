@@ -16,13 +16,15 @@
     <p>Pickup Address: {{item.pickup_address}} </p>
     <p>Pickup Date: {{item.pickup_date}} </p>
     <p>Item Description: {{item.item_description}} </p>
+
+    <div>
     <button item-id="{{item.id}}" class="item-delete" type="delete" id="item-delete">Remove Item</button>
+    </div>
+
   </div>
   {{/each}}
 </section>
 <!--End User Donated Card Section -->
 
 <!--Link to delete.js javascript file -->
-{{#each item}}
 <script src="/js/delete.js"></script>
-{{/each}}

@@ -7,6 +7,7 @@ const deleteItemHandler = async function (event) {
     const id = event.target.getAttribute('item-id');
 
     console.log(id)
+   
 
     const response = await fetch(`/api/item/${id}`, {
       method: 'DELETE',
@@ -23,6 +24,7 @@ const deleteItemHandler = async function (event) {
 };
 
 
+
 document
-  .querySelector('#item-delete')
+  .querySelector('.item-delete')
   .addEventListener('click', deleteItemHandler);
