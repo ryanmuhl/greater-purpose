@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Item, Category } = require("../models/");
+const withAuth = require('../utils/auth');
 
 // homepage
 router.get("/", async (req, res) => {
@@ -10,7 +11,7 @@ router.get("/", async (req, res) => {
 });
 
 // User Input 
-router.get('/iteminput', async (req, res) => {
+router.get('/iteminput', withAuth, async (req, res) => {
 
 
 
@@ -23,7 +24,7 @@ router.get('/iteminput', async (req, res) => {
 });
 
 // Find All Donations
-router.get('/allitems', async (req, res) => {
+router.get('/allitems', withAuth, async (req, res) => {
   try {
     // Get all items and JOIN with user data
     const dbItemData = await Item.findAll({
@@ -51,7 +52,7 @@ router.get('/allitems', async (req, res) => {
 });
 
 
-router.get('/useritems', async (req, res) => {
+router.get('/useritems', withAuth, async (req, res) => {
   try {
     const userData = await Item.findAll( {
       where: {
