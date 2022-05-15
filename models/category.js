@@ -1,7 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class Category extends Model {}
+//Populate Category Model with Id, Item_type colums
+class Category extends Model { }
+
 
 Category.init(
     {
@@ -15,17 +17,13 @@ Category.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        // filename: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        // }
     },
-  
+
     {
-    sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'Category',
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'Category',
     }
 );
 

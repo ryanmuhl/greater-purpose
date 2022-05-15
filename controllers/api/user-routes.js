@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Item } = require('../../models');
 
-// / get all users
+// / get all users http://localhost:3001/api/user/
 router.get('/', async (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     });
 });
 
-// get user and associated items by id  /api/user/id
+// get user and associated items by id  http://localhost:3001/user/:id/
 router.get('/:id', async (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] },
@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
         model: Item,
         attributes: ['id', 'item_name']
       },
-  
+
     ]
   })
     .then(dbUserData => {
@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
 });
 
 
-//POST /api/user/   (Create User)
+//Create User http://localhost:3001/api/user
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -63,7 +63,7 @@ router.post('/', async (req, res) => {
 });
 
 
-// POST /api/user/login (login User)
+// POST / (login User) http://localhost:3001/api/user/login
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -104,7 +104,7 @@ router.post('/login', async (req, res) => {
 });
 
 // log out route
-// POST /api/user/logout
+// POST http://localhost:3001/api/user/logout
 router.post('/logout', async (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {

@@ -1,6 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
+//Populate Item Model with Id, first_name,last_name, phone_number, pickup_address, item_name, 
+//item_description, pickup_date, user_id, category_id columns
 class Item extends Model { }
 
 Item.init(

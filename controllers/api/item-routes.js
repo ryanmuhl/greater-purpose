@@ -3,7 +3,7 @@ const res = require('express/lib/response');
 const { Item, User, Category } = require('../../models');
 
 
-// / Get All Items /api/item
+// / Get All Items http://localhost:3001/api/item
 router.get('/', async (req, res) => {
     Item.findAll({
     })
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
       });
   });
 
-//Get item by id /api/item/id
+//Get item by id http://localhost:3001/api/item/id
 router.get('/:id', async (req, res) => {
   Item.findOne({
 
@@ -46,7 +46,7 @@ router.get('/:id', async (req, res) => {
     });
 });
 
-//Delete item by id /api/item/id
+//Delete item by id http://localhost:3001/api/item/id
 router.delete('/:id', async (req, res) => {
   Item.destroy({
 
