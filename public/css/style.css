@@ -131,7 +131,7 @@ a:hover {
     border: 3px solid gray;
     box-shadow: 10px 10px 10px rgb(163, 12, 12);
     width: 40%;
-  height: 75%;
+    height: 75%;
   }
 
   .actionin {
@@ -208,6 +208,24 @@ a:hover {
  }
   
 
-     
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  column-gap: 20px;
+
+}
+
+.item-details {
+  background-color: goldenrod;
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 3px solid gray;
+    box-shadow: 10px 10px 10px rgb(163, 12, 12);
+    width: 20%;
+    height: 400px;
+  
+}
 
      

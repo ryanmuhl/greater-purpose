@@ -2,7 +2,7 @@ const router = require('express').Router();
 const res = require('express/lib/response');
 const { Item, User, Category } = require('../../models');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     Category.findAll()
     .then(dbCategoryData => res.json(dbCategoryData))
     .catch(err => {
@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
     Category.findOne({
 
         where: {
@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     Category.create({
       item_name: req.body.item_name,
       item_type: req.body.item_type,  

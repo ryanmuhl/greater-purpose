@@ -4,7 +4,7 @@ const { Item, User, Category } = require('../../models');
 
 
 // / Get All Items /api/item
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     Item.findAll({
     })
       .then(dbUserData => res.json(dbUserData))
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
   });
 
 //Get item by id /api/item/id
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   Item.findOne({
 
     where: {
@@ -46,7 +46,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/', async(req, res) => {
   req.body.user_id=req.session.userId;
   Item.create(req.body)
     .then(dbPostData => res.json(dbPostData))

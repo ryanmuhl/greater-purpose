@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Item } = require('../../models');
 
 // / get all users
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
   })
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 });
 
 // get user and associated items by id  /api/user/id
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] },
     where: {
@@ -105,7 +105,7 @@ router.post('/login', async (req, res) => {
 
 // log out route
 // POST /api/user/logout
-router.post('/logout', (req, res) => {
+router.post('/logout', async (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res
