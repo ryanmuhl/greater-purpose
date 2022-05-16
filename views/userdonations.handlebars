@@ -1,0 +1,30 @@
+<!--Hero Container -->
+<div class="hero-cont">
+
+  <h1>User Donated Items</h1>
+
+</div>
+<!--End Hero Container -->
+
+<!--Start User Donated Card Section -->
+<section class="items">
+  {{#each userItems as |item|}}
+  <div class="item-details" item-id="{{item.id}}">
+    <h4>Item Name: {{item.item_name}}</h4>
+    <p>Name Of Donator: {{item.first_name}} {{item.last_name}} </p>
+    <p>Phone#: {{item.phone_number}} </p>
+    <p>Pickup Address: {{item.pickup_address}} </p>
+    <p>Pickup Date: {{item.pickup_date}} </p>
+    <p>Item Description: {{item.item_description}} </p>
+
+    <div>
+    <button item-id="{{item.id}}" class="item-delete" type="delete" id="item-delete">Remove Item</button>
+    </div>
+
+  </div>
+  {{/each}}
+</section>
+<!--End User Donated Card Section -->
+
+<!--Link to delete.js javascript file -->
+<script src="/js/delete.js"></script>

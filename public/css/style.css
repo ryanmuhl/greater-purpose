@@ -1,0 +1,225 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Start Header Styling*/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: orange;
+  color: black;
+  background-size: 100px 75px;
+}
+
+/*End Header Styling*/
+
+
+/*Start Login Styling*/
+.hero {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(167, 118, 26);
+  height: 1000px;
+
+}
+
+.hero-form {
+  border: 3px solid gray;
+  background-color: orange;
+  padding: 20px;
+  color: black;
+  width: 40%;
+  height: 40%;
+  margin: 3.5%;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgb(163, 12, 12);
+}
+
+.hero-form h3 {
+  font-size: 24px;
+  margin: 0;
+  color: black;
+}
+
+.hero-form p {
+  margin: 5px 0 15px 0;
+}
+
+.hero-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(167, 118, 26);
+  ;
+
+}
+
+
+.hero-cont h2 {
+  font-size: 55px;
+  color: black;
+}
+
+.form-input {
+  border: 1px solid gray;
+  padding: 7px 15px;
+  font-size: 16px;
+  width: 90%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.login-form button {
+  border-radius: 10px;
+}
+
+.signup-form button {
+  border-radius: 10px;
+}
+/*End Login Styling*/
+
+
+.title {
+  text-align: center;
+}
+
+.contant {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.drop {
+  width: 25px;
+  padding: 1rem;
+}
+
+.submit2 {
+  display: flex;
+  justify-content: center;
+}
+
+/*Start Navigation Styling*/
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.navigation a {
+  padding: 10px;
+}
+
+a:hover {
+  transition: all .4s ease-in-out;
+  background-color: yellow;
+}
+/*End Navigation Styling*/
+
+
+
+/* Start Donate Form Styling */
+.action {
+  display: flex;
+  flex-direction: column;
+
+  background-color: goldenrod;
+  margin-top: 25px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid gray;
+  box-shadow: 10px 10px 10px rgb(163, 12, 12);
+  width: 40%;
+  height: 75%;
+}
+
+.actionin {
+  justify-content: center;
+  display: flex;
+
+
+}
+/* End Donate Form Styling */
+
+/* Start Home Page Styling */
+.middle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgb(167, 118, 26);
+  height: 1000px;
+
+}
+
+.middle2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(167, 118, 26);
+  height: 1000px;
+}
+
+.middle div p {
+  display: flex;
+  width: 600px;
+  align-items: top;
+  padding-top: 30px;
+  padding-left: 20px;
+  border-style: double;
+}
+
+.girl-image img {
+  width: auto;
+  height: auto;
+}
+
+.headerbox {
+  padding: 20px;
+  height: 125px;
+  background-image: url("/images/donate3.jpg");
+  background-position: center;
+  background-size: contain;
+}
+/* End Home Page Styling */
+
+/* Start Item Input Page Styling */
+.create-button {
+  padding-left: 250px;
+  border-radius: 10px;
+
+  transition: all .3s ease-in-out;
+}
+
+.create-button button {
+  border-radius: 10px;
+
+}
+/* End Item Input Page Styling*/
+
+/* Start All Donated Items Styling*/
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 60px;
+  background-color: rgb(167, 118, 26);
+  height: 1000px; 
+
+}
+
+.item-details {
+  background-color: goldenrod;
+  margin-top: 25px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid gray;
+  box-shadow: 10px 10px 10px rgb(163, 12, 12);
+  width: 20%;
+  height: 450px;
+
+}
+/* End All Donated Items Styling*/

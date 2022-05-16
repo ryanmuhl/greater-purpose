@@ -1,0 +1,21 @@
+<!--Start Hero -->
+<div class="hero-cont">
+  <h1>All Donated Items</h1>
+
+</div>
+<!--End Hero -->
+
+<!--Start All Donated Items Section -->
+<section class="items">
+  {{#each items as |item|}}
+  <div class="item-details">
+    <h4>Item Name: {{item.item_name}}</h4>
+    <p>Name Of Donator: {{item.first_name}} {{item.last_name}} </p>
+    <p>Phone#: {{item.phone_number}} </p>
+    <p>Pickup Address: {{item.pickup_address}} </p>
+    <p>Pickup Date: {{item.pickup_date}} </p>
+    <p>Item Description: {{item.item_description}} </p>
+  </div>
+  {{/each}}
+</section>
+<!--End All Donated Items Section -->
