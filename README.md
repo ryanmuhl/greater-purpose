@@ -72,7 +72,8 @@ So that other users can view items and contact the user and set up a time to pic
 
 
 ## Heroku/App URL
-http://fathomless-waters-53680.herokuapp.com/
+https://fathomless-waters-53680.herokuapp.com/
+
 
 ## GitHub Repository
 https://github.com/ryanmuhl/greater-purpose

@@ -6,7 +6,7 @@ const deleteItemHandler = async function (event) {
   if (event.target.hasAttribute('item-id')) {
     const id = event.target.getAttribute('item-id');
 
-    console.log(id)
+    console.log(event.target)
    
 
     const response = await fetch(`/api/item/${id}`, {
@@ -24,7 +24,7 @@ const deleteItemHandler = async function (event) {
 };
 
 
-
-document
-  .querySelector('.item-delete')
-  .addEventListener('click', deleteItemHandler);
+let allButtons = document.querySelectorAll ('.item-delete')
+allButtons.forEach((button)=> {
+  button.addEventListener('click', deleteItemHandler)
+})

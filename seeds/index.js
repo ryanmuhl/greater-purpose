@@ -10,9 +10,9 @@ const seedAll = async () => {
   await seedCategories();
   
 
-  await seedItems();
+  // await seedItems();
 
-  await seedUser();
+  // await seedUser();
  
 
   process.exit(0);
